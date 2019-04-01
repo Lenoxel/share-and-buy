@@ -1,25 +1,7 @@
-<!DOCTYPE html>
 
-{% load static %}
+{% extends "base.html" %}
 
-<html>
-<head>
-	<title>ShareNBuy</title>
-	<meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{% static '' %}">
-</head>
-<body>
-	<header>
-		<img src="" alt="">
-		<nav class="menu">
-			<ul>
-				<li><a href="">Sobre</a></li>
-				<li><a href="">Planos</a></li>
-				<li><a href="">Suporte</a></li>
-			</ul>
-		</nav>
-	</header>
-
+{% block conteudo %}
 	<main>
 		<h2>Painel de Acesso</h2>
 		<div class="painel_afiliado">
@@ -33,15 +15,4 @@
 			<h2>Produtor</h2>
 		</div>
 	</main>
-
-	<footer>
-		<ul>
-			<li>ShareBuySell |</li>
-			<li>Todos os direitos reservados. 2019 |</li>
-			<li>Sistema desenvolvido por</li>
-			<li><img src="" alt=""></li>
-		</ul>
-	</footer>
-
-</body>
-</html>
+{% endblock %}
