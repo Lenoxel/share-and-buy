@@ -1,6 +1,8 @@
 *.pyc
 *~
 __pycache__
+bower_components
+node_modulos
 myvenv
 db.sqlite3
 /static

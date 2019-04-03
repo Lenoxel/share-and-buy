@@ -1,0 +1,68 @@
+main
+	+breakpoint($tablet-maior)
+		margin: -140px 0 0 0
+	+breakpoint($tablet-medio)
+		margin: -150px 0 0 0
+	+breakpoint($tablet-menor)
+		margin: -170px 0 0 0
+	+breakpoint($celular)
+		margin: -160px 0 0 0
+
+	position: relative
+	margin: -100px 0 0 0
+
+	.container
+
+		+make-sm-column(10)
+		+make-sm-column-offset(1)
+		padding: 0
+		background:
+			color: $branco
+		border:
+			radius: 10px
+
+		.deg-sup-cont
+			position: relative
+			margin: 0
+			float: left
+			width: 100%
+			height: 35px
+			+gradient(180deg, $cinza 20%, transparent)
+
+	.conteudo
+
+		padding: 7rem 0 
+ 
+		h1
+			+breakpoint($tablet-maior)
+				+make-sm-column(10)
+				+make-sm-column-offset(2)
+				+font-size(55px)
+			+breakpoint($tablet-menor)
+				+font-size(48px)
+			+breakpoint($celular)
+				+font-size(40px)
+
+			+font-size(64px)
+			+make-sm-column(8)
+			+make-sm-column-offset(2)
+			text-align: center
+			//color: $azul
+			margin: 0 0 4.7rem 0
+
+		p
+			+breakpoint($tablet-maior)
+				+make-sm-column(10)
+				+make-sm-column-offset(2)
+				+font-size(16px)
+			+breakpoint($celular)
+				+font-size(14px)
+			
+			+make-sm-column(8)
+			+make-sm-column-offset(2)
+			+font-size(18px)
+			text-align: justify
+			margin-bottom: 7rem
+
+		.carousel
+
