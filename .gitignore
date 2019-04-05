@@ -2,8 +2,8 @@
 *~
 __pycache__
 bower_components
-node_modules
 myvenv
 db.sqlite3
+node_modules
 /static
 .DS_Store
