@@ -16,11 +16,11 @@ class Product(models.Model):
     preco = models.DecimalField('Preço', decimal_places=2, max_digits=8)
     disponivelEstoque = models.BooleanField("Disponível no estoque", default=False)
     quantidadeEstoque = models.IntegerField("Quantidade no estoque")
-    afiliadoComissao = models.FloatField("Comissão do afiliado", decimal_places=2, max_digits=5)
-    desconto = models.FloatField("Desconto", decimal_places=2, max_digits=5)
+    afiliadoComissao = models.DecimalField("Comissão do afiliado", decimal_places=2, max_digits=5)
+    desconto = models.DecimalField("Desconto", decimal_places=2, max_digits=5)
     emPromocao = models.BooleanField("Em promoção", default=False)
     tipo = models.CharField('Tipo', max_length=5, choices=[(tag, tag.value) for tag in ProductType])
-    tamanho = models.FloatField("Tamanho [MB]", decimal_places=2, max_digits=15)
+    tamanho = models.DecimalField("Tamanho [MB]", decimal_places=2, max_digits=15)
     formato = models.CharField('Formato', max_length=5, choices=[(tag, tag.value) for tag in ProductFileFormat])
     dataCriacao = models.DateTimeField('Criado em', auto_now_add=True)
     dataModificacao = models.DateTimeField('Última modificação', auto_now=True)
@@ -31,7 +31,7 @@ class Product(models.Model):
         ordering = ['nome']
 
     def __str__(self):
-        return self.name
+        return self.nome
 
 class Manufacturer(models.Model):
     slug = models.SlugField('Identificador', max_length=100)
@@ -49,7 +49,7 @@ class Manufacturer(models.Model):
         ordering = ['nome']
 
     def __str__(self):
-        return self.name
+        return self.nome
 
 
 class Affiliated(models.Model):
@@ -67,5 +67,5 @@ class Affiliated(models.Model):
         ordering = ['nome']
 
     def __str__(self):
-        return self.name
+        return self.nome
 
