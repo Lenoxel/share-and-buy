@@ -3,6 +3,7 @@
 __pycache__
 bower_components
 myvenv
+node_modules
 db.sqlite3
 node_modules
 /static
