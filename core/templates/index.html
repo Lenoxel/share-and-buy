@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+<<<<<<< HEAD
 {% block conteudo %} 
 
 	<main>
@@ -23,3 +24,53 @@
 	</main>
 
 {% endblock %}
+=======
+{% load static %}
+
+<html>
+<head>
+	<title>ShareNBuy</title>
+	<meta charset="utf-8">
+	//O 'assets' tá apontando pra que pasta?
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/bootstrap.min.css' %}">
+</head>
+<body>
+	<header>
+		<img src="" alt="">
+		<nav class="menu">
+			<ul>
+				<li><a href="">Sobre</a></li>
+				<li><a href="">Planos</a></li>
+				<li><a href="">Suporte</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Painel de Acesso</h2>
+		<div class="painel_afiliado">
+			<img src="" alt="">
+			<span>Sou</span>
+			<h2>Afiliado</h2>
+		</div>
+		<div class="painel_produtor">
+			<img src="" alt="">
+			<span>Sou</span>
+			<h2>Produtor</h2>
+		</div>
+	</main>
+
+	<footer>
+		<ul>
+			<li>ShareBuySell |</li>
+			<li>Todos os direitos reservados. 2019 |</li>
+			<li>Sistema desenvolvido por</li>
+			<li><img src="" alt=""></li>
+		</ul>
+	</footer>
+
+//O 'assets' tá apontando pra que pasta?
+<script src="{% static 'assets/bootstrap.min.js' %}"></script>
+</body>
+</html>
+>>>>>>> 125cd7f53a8dea08090883700c95e117d7329a90
