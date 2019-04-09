@@ -19,7 +19,7 @@ def produtor(request):
     return render(request, 'produtor.html')
 
 def loginAfiliado(request):
-    return render(request, 'produtor.html')
+    return render(request, 'loginAfiliado.html')
 
 def loginProdutor(request):
-    return render(request, 'produtor.html')
+    return render(request, 'loginProdutor.html')
