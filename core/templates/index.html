@@ -1,11 +1,46 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
 
-<<<<<<< HEAD
-{% block conteudo %} 
+{% load static %}
 
+<html>
+<head>
+	<title>{% block title %}ShareNBuy{% endblock %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- CSS Da Pagina Index -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+
+</head>
+
+<body>
+
+	<!-- Menu -->
+	<header>
+		<!-- Logo -->
+		<img src="" alt="">
+
+		<!-- Links -->
+		<div class="links">
+			<nav>
+				<ul>
+					<li><a href="{% url 'sobre' %}">Sobre</a></li>
+					<li><a href="{% url 'planos' %}">Planos</a></li>
+					<li><a href="{% url 'suporte' %}">Suporte</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<!-- Conteudo -->
 	<main>
+		
+		<!-- Titulo -->
 		<h2>Painel de Acesso</h2>
+
+		<!-- Paineis -->
 		<div class="paineis">
+
+			<!-- Afiliado -->
 			<div class="painel_afiliado">
 				<a href="">
 					<img src="" alt="">
@@ -13,6 +48,8 @@
 					<h2>Afiliado</h2>
 				</a>
 			</div>
+
+			<!-- Produtor -->
 			<div class="painel_produtor">
 				<a href="">
 					<img src="" alt="">
@@ -23,54 +60,16 @@
 		</div>
 	</main>
 
-{% endblock %}
-=======
-{% load static %}
-
-<html>
-<head>
-	<title>ShareNBuy</title>
-	<meta charset="utf-8">
-	//O 'assets' tá apontando pra que pasta?
-    <link rel="stylesheet" type="text/css" href="{% static 'assets/bootstrap.min.css' %}">
-</head>
-<body>
-	<header>
-		<img src="" alt="">
-		<nav class="menu">
-			<ul>
-				<li><a href="">Sobre</a></li>
-				<li><a href="">Planos</a></li>
-				<li><a href="">Suporte</a></li>
-			</ul>
-		</nav>
-	</header>
-
-	<main>
-		<h2>Painel de Acesso</h2>
-		<div class="painel_afiliado">
-			<img src="" alt="">
-			<span>Sou</span>
-			<h2>Afiliado</h2>
-		</div>
-		<div class="painel_produtor">
-			<img src="" alt="">
-			<span>Sou</span>
-			<h2>Produtor</h2>
-		</div>
-	</main>
-
+	<!-- Footer -->
 	<footer>
 		<ul>
 			<li>ShareBuySell |</li>
 			<li>Todos os direitos reservados. 2019 |</li>
 			<li>Sistema desenvolvido por</li>
-			<li><img src="" alt=""></li>
+			<li><img src="" alt="">.</li>
 		</ul>
 	</footer>
-
-//O 'assets' tá apontando pra que pasta?
-<script src="{% static 'assets/bootstrap.min.js' %}"></script>
+	
+	<script src="{% static 'bower_componets/bootstrap-sass/assets/bootstrap.min.js' %}"></script>
 </body>
 </html>
->>>>>>> 125cd7f53a8dea08090883700c95e117d7329a90
