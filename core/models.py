@@ -69,7 +69,7 @@ class Manufacturer(models.Model):
     nome = models.CharField('Nome', max_length=100)
     cpf = models.CharField('CPF', max_length=11, default='')
     dataNascimento = models.DateField('Data de Nascimento', default='')
-    email = models.EmailField('E-mail', max_length=40, unique= True)
+    email = models.EmailField('E-mail', max_length=40, unique=True)
     emailConfirmado = models.BooleanField('E-mail confirmado', default=False)
     senha = models.CharField('Senha', max_length=30)
     produtorPrincipal = models.BooleanField("Produtor Principal", default=False)
