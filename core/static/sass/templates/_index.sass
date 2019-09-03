@@ -1,7 +1,8 @@
 //**********************************************************************************
 //***  Header
 //**********************************************************************************
-
+body
+	background-color: $azul-escuro
 header
 	+clearfix
 	+flexbox
@@ -11,7 +12,8 @@ header
 	width: 100%
 	height: 110px
 	background-color: $azul-medio
-	border-top: 20px solid $azul-escuro
+	margin-top: 20px
+	//border-top: 20px solid $azul-escuro
 	z-index: 0
 
 	.logo
@@ -56,37 +58,79 @@ header
 //**********************************************************************************
 
 main
-	+breakpoint($medium)
+	+breakpoint($small)
 		height: 110%
-
-	+flexbox
-	flex-direction: column
-	justify-content: center
-	align-items: center
-
-	background-color: $branco
 	width: 100%
-	height: 70%
-	min-height: 440px
-	z-index: 0
+	height: calc(100% - 50px - 6px - 110px)
+	.container
+		+flexbox
+		flex-direction: column
+		justify-content: center
+		align-items: center
 
-	h2
-		+font-size(36px)
-		color: $azul-escuro
-		padding: 45px 0 45px 0
-		text-align: center
+		background-color: $branco
+		width: 100%
+		height: 100%
+		min-height: 440px
+		z-index: 0
+
+		h2
+			+font-size(36px)
+			color: $azul-escuro
+			padding: 45px 0 45px 0
+			text-align: center
 
 
-	.paineis
+		.paineis
+			+flexbox
+			justify-content: center
+			align-items: center
+			flex: 1
+			flex-wrap: wrap
+			width: 100%
+
+		.paineis div
+			margin: 0 3% 0 3%
+
+		.opacity
+			+flexbox
+			justify-content: center
+			align-items: center
+			position: absolute
+			background-color: #000
+			opacity: 0.8
+			width: 100%
+			height: calc(100% + 43px)
+			margin-top: -98px
+			z-index: 2
+	
+	.container-login
+		top: 10px
 		+flexbox
 		justify-content: center
 		align-items: center
-		flex: 1
-		flex-wrap: wrap
+		position: absolute
 		width: 100%
+		height: 100%
+		z-index: 3
+		form
+			padding: 40px 0px 0px 0px
+			margin: auto 0 auto 0
+			background-color: #fff
+			width: 540px
+			height: 75%
+			opacity: 0.82
 
-	.paineis div
-		margin: 0 3% 5% 3% //breakpoint medio da erro aqui
+			h2
+				color: $azul-escuro
+				text-align: center
+				font-size: 45px
+				padding-bottom: 45px
+			span
+				display: none
+				
+			input
+				display: none
 		
 
 
@@ -95,13 +139,10 @@ main
 //**********************************************************************************
 
 footer
-	position: relative
-	bottom: 0
 	width: 100%
 	height: 50px
 	background-color: $branco
 	border-top: 5px solid $azul-medio
-	margin-top: 5px
 	z-index: 0
 
 	ul
@@ -120,3 +161,6 @@ footer
 			display: inline-block
 			+font-size(16px)
 			color: $azul-claro
+
+			img
+				margin-top: -10px
