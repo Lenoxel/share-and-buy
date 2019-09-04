@@ -104,8 +104,8 @@ class User(models.Model):
         return self.nome
 
 class ProductAffiliated(models.Model):
-    productId = models.PositiveIntegerField()
-    affiliatedId = models.PositiveIntegerField()
+    productId = models.ForeignKey('core.Product', verbose_name='Id do Produto', on_delete=models.CASCADE)
+    affiliatedId = models.ForeignKey('core.User', verbose_name='Id do Afiliado', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'Afiliado a um produto'
