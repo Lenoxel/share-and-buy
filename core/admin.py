@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from .models import Product, User, ProductAffiliated
+from .models import Product, ProductAffiliated
 
 admin.site.register(Product)
-admin.site.register(User)
 admin.site.register(ProductAffiliated)
