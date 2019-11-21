@@ -4,36 +4,6 @@ from phone_field import PhoneField
 from enum import Enum
 from django.template.defaultfilters import slugify
 
-<<<<<<< HEAD
-class BRStates(Enum):
-   AC = "Acre"
-   AL = "Alagoas"
-   AP = "Amapá"
-   AM = "Amazonas"
-   BA = "Bahia"
-   CE = "Ceará"
-   DF = "Distrito Federal"
-   ES = "Espírito Santo"
-   GO = "Goiás"
-   MA = "Maranhão"
-   MT = "Mato Grosso"
-   MS = "Mato Grosso do Sul"
-   MG = "Minas Gerais"
-   PA = "Pará"
-   PB = "Paraíba"
-   PR = "Paraná"
-   PE = "Pernambuco"
-   PI = "Piauí"
-   RJ = "Rio de Janeiro"
-   RN = "Rio Grande do Norte"
-   RS = "Rio Grande do Sul"
-   RO = "Rondônia"
-   RR = "Roraima"
-   SC = "Santa Catarina"
-   SP = "São Paulo"
-   SE = "Sergipe"
-   TO = "Tocantins"
-=======
 
 class BRStates(Enum):
     AC = "Acre"
@@ -64,7 +34,6 @@ class BRStates(Enum):
     SE = "Sergipe"
     TO = "Tocantins"
 
->>>>>>> 2de61abb52edc5456bba7a7913595b33133d95c9
 
 class User(models.Model):
     slug = models.SlugField('Identificador', max_length=100, unique=True)
@@ -96,20 +65,11 @@ class User(models.Model):
         ordering = ['nome']
 
     # def save(self):
-<<<<<<< HEAD
-        # self.save()
-    
-=======
     # self.save()
 
->>>>>>> 2de61abb52edc5456bba7a7913595b33133d95c9
     def save(self, *args, **kwargs):
         self.slug = self.slug or slugify(self.nome)
         super().save(*args, **kwargs)
 
-<<<<<<< HEAD
-    def __str__(self):
-=======
     def _str_(self):
->>>>>>> 2de61abb52edc5456bba7a7913595b33133d95c9
         return self.nome
