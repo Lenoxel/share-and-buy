@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'phone_field',
+    'accounts',
 ]
 
 MIDDLEWARE = [
